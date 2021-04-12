@@ -1,0 +1,21 @@
+
+mysql数据表准备
+-- ----------------------------
+-- create databse sparkmall
+-- ----------------------------
+drop database if EXISTS sparkmall;
+create database sparkmall DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+
+-- ----------------------------
+-- create table category_top10
+-- ----------------------------
+use sparkmall;
+drop table if exists category_top10;
+create table category_top10 (
+    taskId text,
+    category_id text,
+    click_count bigint(20) default null,
+    order_count bigint(20) default null,
+    pay_count bigint(20) default null
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
